@@ -6,9 +6,13 @@ function main() {
     document.addEventListener('click', getCoord)
     let steps = 0
     let count = 0
-    let $allTd = document.querySelectorAll('td')
     let $count = document.querySelector('#fox-count')
     const $footer = document.querySelector('#footer')
+    let h1 = document.querySelector('h1')
+    let help = document.querySelector('#help')
+    //Показать и скрыть справку
+    h1.onclick = () => help.classList.add('active')
+    help.onclick = e => e.target.classList.remove('active')
 
     //Получение координат при нажатии
     function getCoord(e) {

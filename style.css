@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-image: url('./img/forest.jpg');
     background-size: contain;
@@ -15,19 +21,36 @@ a {
     text-decoration: none;
 }
 
-#container {
-    /* display: flex; */
-    /* justify-content: center; */
+h1 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 table {
     /* cursor: none; */
     border-spacing: 1;
     padding: 0px;
+
     border-collapse: collapse;
     background: rgba(255, 255, 255, .5);
 }
 
+#help{
+    display: none;
+    z-index: 1;
+    font-size: 20px;
+    padding: 2% 10%;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .8);
+}
+#help.active{
+    display: block;
+}
 td {
     border: 1px solid black;
     width: 45px;
