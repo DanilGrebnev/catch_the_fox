@@ -1,0 +1,105 @@
+body {
+    background-image: url('./img/forest.jpg');
+    background-size: contain;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    /* cursor: none; */
+    border-spacing: 1;
+    padding: 0px;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, .5);
+}
+
+td {
+    border: 1px solid black;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    font-size: 25px;
+    transition: .5s;
+    background-image: url("./img/forest.png");
+    background-position: center;
+    background-size: contain;
+    color: black;
+}
+
+td.show {
+    background-image: none;
+}
+
+td.fox,
+div.fox {
+    background-color: none;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+td.fox {
+    background-image: url('./img/fox.png');
+}
+
+div.fox {
+    width: 30px;
+    height: 30px;
+    background-image: url('./img/fox-head.png');
+}
+
+#menu {
+    height: 70px;
+    /* border: 1px solid black; */
+    margin-bottom: 10px;
+}
+
+#fox-count {
+    color: gold;
+    font-size: 35px;
+    margin-left: 10px;
+}
+
+#footer {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 30px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    width: 100vw;
+    bottom:0;
+}
+
+@media screen and (max-width:580px) {
+    td {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width:580px) {
+    td {
+        font-size: 15px;
+        width: 20px;
+        height: 20px;
+    }
+    body{
+        background-size: cover;
+    }
+}
