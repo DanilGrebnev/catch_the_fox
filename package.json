@@ -1,9 +1,0 @@
-{
-    "name": "my-cool-package",
-    "devDependencies": {
-      "standard": "index.js"
-    },
-    "scripts": {
-      "test": "standard && node index.js"
-    }
-  }
