@@ -15,6 +15,7 @@ body {
     align-items: center;
     height: 100vh;
     position: relative;
+    padding-top:20px;
 }
 
 a {
@@ -113,8 +114,8 @@ div.fox {
 
 @media screen and (max-width:580px) {
     td {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
         font-size: 15px;
     }
     h1{
