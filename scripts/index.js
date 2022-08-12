@@ -64,6 +64,7 @@ function main() {
     function restart() {
         $footer.innerHTML = ''
         $table.innerHTML = ''
+        steps = 0
         $footer.innerHTML = '<div id="fox-count"></div>'
         $count = document.querySelector('#fox-count')
         count = 0
