@@ -77,7 +77,7 @@ function main() {
     }
 
     //Можно будет выводить подсказку и местонахождении лис
-    searchFox()
+    //searchFox()
 
     function restart() {
         $footer.innerHTML = ''
@@ -88,7 +88,7 @@ function main() {
         count = 0
         array = []
         setTable($table)
-        searchFox()
+        //searchFox()
         setSteps()
     }
     
