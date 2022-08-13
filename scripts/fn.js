@@ -1,4 +1,6 @@
-
+function getRandomId () {
+    return Math.floor(Math.random() * 100000)
+}
 //Получаем случайное число
 function getRandom(min = 1, max = 9) {
     // случайное число от min до (max+1)
@@ -10,7 +12,7 @@ const setTable = (table, n = 10) => {
     for (let i = 1; i < n; i++) {
         let s = ''
         for (let k = 1; k < n; k++) {
-            s += `<td data-x="${k}" data-y="${i}"></td>`
+            s += `<td data-x="${k}" data-y="${i}" data-id="${getRandomId()}"></td>`
         }
         table.innerHTML += s
     }
@@ -52,8 +54,9 @@ function hitInFox(x, y, e) {
 }
 
 //Можно будет выводить подсказку и местонахождении лис
-function help(arr) {
-    arr.forEach(td => {
+function searchFox() {
+    const $allTd = document.querySelectorAll('td')
+    $allTd.forEach(td => {
         a.forEach(fox => {
             if (+td.dataset.x === +fox.x && +td.dataset.y === +fox.y) {
                 td.style.background = 'blue'
@@ -61,5 +64,8 @@ function help(arr) {
         })
     })
 }
-
-export { getRandom, setTable, getRandomFox, hitInFox, help, a, $table }
+function checkArr(arr, id) {
+    if (arr.includes(id)) return true
+    arr.push(id)
+}
+export { getRandom, setTable, getRandomFox, hitInFox, searchFox, checkArr, a, $table }
